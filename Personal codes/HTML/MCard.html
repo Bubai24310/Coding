@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marriage Card Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .card {
+            border: 2px solid #ccc;
+            padding: 20px;
+            margin-top: 20px;
+            display: none;
+        }
+        .card img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Marriage Card Generator</h1>
+        <form id="marriageForm">
+            <label for="groomName">Groom's Name:</label>
+            <input type="text" id="groomName" name="groomName" required><br><br>
+            <label for="brideName">Bride's Name:</label>
+            <input type="text" id="brideName" name="brideName" required><br><br>
+            <button type="submit">Generate Card</button>
+        </form>
+        <div class="card" id="card">
+            <h2 id="cardTitle"></h2>
+            <p id="cardText"></p>
+            <img src="marriage-card.jpg" alt="Marriage Card">
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('marriageForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const groomName = document.getElementById('groomName').value;
+            const brideName = document.getElementById('brideName').value;
+            const cardTitle = document.getElementById('cardTitle');
+            const cardText = document.getElementById('cardText');
+            const card = document.getElementById('card');
+
+            cardTitle.textContent = `Wedding Invitation`;
+            cardText.textContent = `You are cordially invited to the wedding of ${groomName} and ${brideName}.`;
+            card.style.display = 'block';
+        });
+    </script>
+</body>
+</html>

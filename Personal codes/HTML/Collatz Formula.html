@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    print("try to prove the colatz theory")
+    c0 = input(print("Enter your number"))
+    s = 0
+
+    while c0 != 1:
+       if c0 % 2 == 0:
+         c0 = c0 / 2
+         print(c0)
+      elif c0 % 2 != 0:
+         c0 = c0 * 3 + 1
+         print(c0)
+     s = s + 1
+    print(c0, "\nsteps =", s)
+</html>

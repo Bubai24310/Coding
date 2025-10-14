@@ -1,0 +1,39 @@
+print("""\tHello user this a user freindly calculator
+      Just follow the instructions.\n """)
+print('''Guide for the available operations:
+\t\b + \tfor addition
+\t\b - \tfor substraction
+\t\b * \tfor multiplication
+\t\b / \tfor division
+\t\b sq\tfor square
+\n''')
+
+n1 = float(input("Enter the first number: \t"))
+op = input("Enter the operation (+, -, *, /, sq): \t")
+if op == 'sq':
+    result = n1 ** 2
+    print(f"The square of {n1} is {result}")
+else:
+    n2 = float(input("Enter the second number: \t"))
+    break
+
+
+o = input("Enter the operation (+, -, *, /, = ): \t")
+while o != '=':
+    if o == '+':
+        n1 += n2
+    elif o == '-':
+        n1 -= n2
+    elif o == '*':
+        n1 *= n2
+    elif o == '/':
+        if n2 != 0:
+            n1 /= n2
+        else:
+            print("Error: Division by zero is not allowed.")
+            break
+    else:
+        print("Invalid operation. Please try again.")
+    
+    print(f"Current result: {n1}")
+    o = input("Enter the operation (+, -, *, /, = ): \t")
