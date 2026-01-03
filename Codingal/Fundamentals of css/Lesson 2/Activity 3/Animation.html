@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            @keyframes example {
+                0%   {background-color: red;}
+                25%  {background-color: yellow;}
+                50%  {background-color: blue;}
+                75%  {background-color: green;}
+                100% {background-color: red;}
+            }
+            @keyframes rotatebox {
+                from {transform: rotate(0deg);}
+                to {transform: rotate(360deg);}
+            }
+            div{
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                animation-name: rotatebox;
+                animation-duration: 4s;
+                animation-iteration-count: infinite;
+            }
+            div {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                animation-name: example;
+                animation-duration: 4s;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            HI
+        </div>
+</html>
